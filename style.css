@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f2;
+    color: #800080;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll on animations */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.day-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 90%; /* Responsive width */
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+img {
+    max-width: 90%; /* Responsive image width */
+    height: auto;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #a0522d;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.nav {
+    margin-top: 20px;
+    display: flex; /* Use flexbox for navigation */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the navigation links */
+}
+
+.nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px; /* Consistent margin */
+    background-color: #f0f0f0;
+    color: #800080;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.nav a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); } /* Slightly smaller pulse */
+    100% { transform: scale(1); }
+}
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .day-container {
+        padding: 15px;
+    }
+
+    .nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
